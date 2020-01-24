@@ -22,13 +22,15 @@ def clear():
 def inputValidation():
     global count
     suspiciousInput = ""
-    valid = False
+    validInt = False
     inRange = False
-    while(not valid and not inRange):
+    
+    # Keep trying new input from user until it's a valid integer 1 - 100
+    while(not validInt or not inRange):
         suspiciousInput = input("Give me a guess: ")
         count = count + 1
-        valid = suspiciousInput.isnumeric()
-        if(not valid):
+        validInt = suspiciousInput.isnumeric()
+        if(not validInt):
             print("Integers 1 - 100 only!")
         else:
             suspiciousInput = int(suspiciousInput)
@@ -36,12 +38,13 @@ def inputValidation():
                 inRange = True
             else:
                 inRange = False
+                print("Integers 1 - 100 only!")
         
     return suspiciousInput
     
 # Helper function for inputValidation() to check is the integer is in range of 1 - 100. 
 def isInRange(suspiciousInput):
-    if(suspiciousInput > 0 and suspiciousInput < 101):
+    if((suspiciousInput > 0) and (suspiciousInput < 101)):
         return True
     else:
         return False
