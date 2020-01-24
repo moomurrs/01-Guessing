@@ -39,7 +39,7 @@ def inputValidation():
         
     return suspiciousInput
     
-# Helper function for inputValidation() to check is the integer is in range of 1 - 100.
+# Helper function for inputValidation() to check is the integer is in range of 1 - 100. 
 def isInRange(suspiciousInput):
     if(suspiciousInput > 0 and suspiciousInput < 101):
         return True
@@ -75,5 +75,5 @@ while(playbool):
         clear() 
     else:
         playbool = False
-        print("Thanks for playing!")
+        print("Thanks for playing!") 
 
