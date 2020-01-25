@@ -27,7 +27,7 @@ def inputValidation():
     
     # Keep trying new input from user until it's a valid integer 1 - 100
     while(not validInt or not inRange):
-        suspiciousInput = input("Give me a guess: ")
+        suspiciousInput = input("Give me a guess: ").strip()
         count = count + 1
         validInt = suspiciousInput.isnumeric()
         if(not validInt):
@@ -71,8 +71,8 @@ while(playbool):
     # If not, the program reaches the end.
     print("You guessed my number! It was: " + str(randomNumber))
     print("You tried " + str(count) + " times!")
-    again = input("Do you want to play again? Y/N ")
-    if(again == "Y"):
+    again = input("Do you want to play again? Y/N ").strip().lower()
+    if(again == "y"):
         playbool = True
         print("\n\n")
         clear() 
