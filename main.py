@@ -1,7 +1,9 @@
 # Assignment 1: Guessing Game
 # Murun T.
 import random
-from os import system, name 
+
+from os import system, name, sys
+assert sys.version_info >= (3,7), "This script requires at least Python 3.7"
 
 # the playbool flag keeps track if the user wants to end the game
 playbool = True
